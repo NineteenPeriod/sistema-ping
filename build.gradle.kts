@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
     implementation(compose.desktop.currentOs)
-}
+    implementation("ca.gosyer:accompanist-flowlayout:0.18.1")}
 
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "16"

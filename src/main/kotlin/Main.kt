@@ -22,9 +22,7 @@ fun main() = application {
     var isAskingToClose by remember { mutableStateOf(false) }
 
     if (isOpen) {
-
         Window(
-
             onCloseRequest = { isAskingToClose = true }, state = rememberWindowState(
                 position = WindowPosition(
                     Alignment.Center
@@ -38,8 +36,6 @@ fun main() = application {
                     Column(
                         modifier = Modifier.fillMaxSize().padding(all = 15.dp),
                         verticalArrangement = Arrangement.SpaceBetween,
-//                        horizontalAlignment = Alignment.CenterHorizontally
-
                     ) {
                         Row(horizontalArrangement = Arrangement.Start) {
                             Text("¿Realmente deseas salir del programa?");
