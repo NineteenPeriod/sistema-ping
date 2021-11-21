@@ -6,4 +6,5 @@ data class Sistema(
     val ip_interna: String,
     val ip_externa: String,
     val ip_base_de_datos: String,
+    val image_url: String
 )

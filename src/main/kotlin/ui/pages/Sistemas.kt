@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.flowlayout.FlowMainAxisAlignment
 import com.google.accompanist.flowlayout.FlowRow
+import ui.components.tarjetaSistema
 import ui.models.Sistema
 
 class Sistemas {
@@ -18,12 +19,12 @@ class Sistemas {
 fun sistemas() {
     val sistemasCargados: List<Sistema> =
         listOf(
-            Sistema("Sistema 1", "Descripcion sistema 1", "142.251.34.142", "172.26.16.1", "192.168.0.1"),
-            Sistema("Sistema 2", "Descripcion sistema 2", "142.251.34.142", "172.26.16.1", "192.168.0.1"),
-            Sistema("Sistema 3", "Descripcion sistema 3", "142.251.34.142", "172.26.16.1", "192.168.0.1"),
-            Sistema("Sistema 4", "Descripcion sistema 4", "142.251.34.142", "172.26.16.1", "192.168.0.1"),
-            Sistema("Sistema 5", "Descripcion sistema 5", "142.251.34.142", "172.26.16.1", "192.168.0.1"),
-            Sistema("Sistema 6", "Descripcion sistema 6", "142.251.34.142", "172.26.16.1", "192.168.0.1"),
+            Sistema("Sistema 1", "Descripcion sistema 1", "142.251.34.142", "172.26.16.1", "192.168.0.1", "https://ui-avatars.com/api/?name=Sistema+1"),
+            Sistema("Sistema 2", "Descripcion sistema 2", "142.251.34.142", "172.26.16.1", "192.168.0.1", "https://ui-avatars.com/api/?name=Sistema+2"),
+            Sistema("Sistema 3", "Descripcion sistema 3", "142.251.34.142", "172.26.16.1", "192.168.0.1", "https://ui-avatars.com/api/?name=Sistema+3"),
+            Sistema("Sistema 4", "Descripcion sistema 4", "142.251.34.142", "172.26.16.1", "192.168.0.1", "https://ui-avatars.com/api/?name=Sistema+4"),
+            Sistema("Sistema 5", "Descripcion sistema 5", "142.251.34.142", "172.26.16.1", "192.168.0.1", "https://ui-avatars.com/api/?name=Sistema+5"),
+            Sistema("Sistema 6", "Descripcion sistema 6", "142.251.34.142", "172.26.16.1", "192.168.0.1", "https://ui-avatars.com/api/?name=Sistema+6"),
         );
     Column(
         modifier = Modifier.fillMaxSize().padding(all = 15.dp),
@@ -33,12 +34,11 @@ fun sistemas() {
         FlowRow(
             modifier = Modifier.fillMaxWidth(),
             mainAxisSpacing = 15.dp,
-            mainAxisAlignment = FlowMainAxisAlignment.SpaceBetween
+            mainAxisAlignment = FlowMainAxisAlignment.SpaceBetween,
+            crossAxisSpacing = 15.dp
         ) {
             for (sistema in sistemasCargados) {
-                Button(onClick = {}) {
-                    Text(sistema.nombre)
-                }
+                tarjetaSistema(sistema)
             }
         }
     }

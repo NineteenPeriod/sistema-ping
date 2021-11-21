@@ -18,7 +18,11 @@ repositories {
 
 dependencies {
     implementation(compose.desktop.currentOs)
-    implementation("ca.gosyer:accompanist-flowlayout:0.18.1")}
+    implementation("ca.gosyer:accompanist-flowlayout:0.18.1")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
+}
+
 
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "16"
